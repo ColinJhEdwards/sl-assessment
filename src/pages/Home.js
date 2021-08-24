@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loadItemDetail } from "../actions/itemAction";
-import { itemData } from "../data";
 
 const Home = () => {
   const dispatch = useDispatch();
