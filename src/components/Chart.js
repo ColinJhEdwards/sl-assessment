@@ -1,9 +1,24 @@
 import styled from "styled-components";
+import { LineChart, Line, XAxis, YAxis } from "recharts";
+import { useSelector, useDispatch } from "react-redux";
+import { loadItemDetail } from "../actions/itemAction";
 
 const Chart = () => {
+  //     const dispatch = useDispatch();
+  //   useEffect(() => {
+  //     dispatch(loadItemDetail());
+
+  //   }, []);
+
+  //   const itemData = useSelector((state) => state);
+  //   const data = itemData.itemDetail.details;
   return (
     <StyledChart>
-      <h2>Chart</h2>
+      <LineChart width={"100%"} height={"100%"} data={"me"}>
+        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+        <XAxis dataKey="name" />
+        <YAxis />
+      </LineChart>
     </StyledChart>
   );
 };

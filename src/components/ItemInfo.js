@@ -4,11 +4,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { loadItemDetail } from "../actions/itemAction";
 
 const ItemInfo = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadItemDetail());
-    console.log("test");
-  }, []);
+  //   const dispatch = useDispatch();
+  //   useEffect(() => {
+  //     dispatch(loadItemDetail());
+  //   }, []);
 
   const itemData = useSelector((state) => state);
   const data = itemData.itemDetail.details;

@@ -1,12 +1,17 @@
 import React, { useEffect } from "react";
-
+import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-
+import { loadItemDetail } from "../actions/itemAction";
 import Chart from "../components/Chart";
 import Table from "../components/Table";
 import ItemInfo from "../components/ItemInfo";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadItemDetail());
+  }, []);
+
   return (
     <StyledHome>
       <div className="content">
