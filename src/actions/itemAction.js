@@ -1,11 +1,13 @@
-import { itemData } from "../data";
+import axios from "axios";
 
 export const loadItemDetail = () => async (dispatch) => {
-  const itemDetails = itemData();
+  const itemDetails = await axios.get(
+    "https://api.jsonbin.io/b/6124515ec5159b35ae02fe3f"
+  );
   dispatch({
     type: "FETCH_DATA",
     payload: {
-      details: itemDetails,
+      item: itemDetails.data[0],
     },
   });
 };

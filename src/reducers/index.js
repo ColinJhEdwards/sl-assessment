@@ -5,7 +5,7 @@ import itemReducer from "./itemReducer";
 
 //give the reducer a name so it can be referenced
 const rootReducer = combineReducers({
-  data: itemReducer,
+  itemDetail: itemReducer,
 });
 
 export default rootReducer;

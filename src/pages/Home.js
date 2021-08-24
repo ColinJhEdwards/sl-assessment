@@ -7,9 +7,11 @@ const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadItemDetail());
+    console.log("test");
   }, []);
 
-  const data = useSelector((state) => state);
+  const itemData = useSelector((state) => state);
+  const data = itemData.itemDetail.details;
   console.log(data);
   return (
     <div>
