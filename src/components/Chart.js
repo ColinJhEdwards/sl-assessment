@@ -22,7 +22,6 @@ const Chart = () => {
       <div className="chart">
         <ResponsiveContainer width="95%" height={500}>
           <LineChart width={1300} height={500} data={graphData}>
-            <Legend verticalAlign="top" height={36} />
             <Line
               type="monotone"
               dataKey="retailSales"
