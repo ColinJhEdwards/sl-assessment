@@ -1,5 +1,5 @@
 const initState = {
-  details: { tags: [] },
+  details: { tags: [], sales: [{}] },
 };
 
 const itemReducer = (state = initState, action) => {

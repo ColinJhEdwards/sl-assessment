@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { LineChart, Line, XAxis, YAxis } from "recharts";
-import { useSelector, useDispatch } from "react-redux";
+import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from "recharts";
+import { useSelector } from "react-redux";
 
 const Chart = () => {
   const itemData = useSelector((state) => state);
@@ -13,24 +13,26 @@ const Chart = () => {
     <StyledChart>
       <h2>Retail Sales</h2>
       <div className="chart">
-        <LineChart width={1300} height={500} data={graphData}>
-          <Line
-            type="monotone"
-            dataKey="wholesaleSales"
-            stroke="#1209c5"
-            dot={false}
-            strokeWidth={3}
-          />
-          <Line
-            type="monotone"
-            dataKey="retailSales"
-            stroke="#3c3c3d"
-            dot={false}
-            strokeWidth={3}
-          />
-          <XAxis dataKey="weekEnding" />
-          <YAxis hide={true} />
-        </LineChart>
+        <ResponsiveContainer width="95%" height={500}>
+          <LineChart width={1300} height={500} data={graphData}>
+            <Line
+              type="monotone"
+              dataKey="retailSales"
+              stroke="#1209c5"
+              dot={false}
+              strokeWidth={3}
+            />
+            <Line
+              type="monotone"
+              dataKey="wholesaleSales"
+              stroke="#3c3c3d"
+              dot={false}
+              strokeWidth={3}
+            />
+            <XAxis dataKey="weekEnding" />
+            <YAxis hide={true} />
+          </LineChart>
+        </ResponsiveContainer>
       </div>
     </StyledChart>
   );
@@ -38,7 +40,7 @@ const Chart = () => {
 
 const StyledChart = styled.div`
   min-height: 60vh;
-  width: 70vw;
+  width: 80rem;
   box-shadow: 0px 1px 4px rgba(167, 167, 167, 0.5);
   background: white;
   margin-left: 2rem;

@@ -21,7 +21,7 @@ const ItemInfo = () => {
 
 const StyledItemInfo = styled.div`
   min-height: 90vh;
-  width: 30rem;
+  width: 100%;
   box-shadow: 0px 1px 4px rgba(167, 167, 167, 0.5);
   background: white;
   display: flex;
