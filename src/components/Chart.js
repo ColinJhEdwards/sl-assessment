@@ -28,7 +28,6 @@ const Chart = () => {
               stroke="#1209c5"
               dot={false}
               strokeWidth={3}
-              name=" Retail Sales"
             />
             <Line
               type="monotone"
@@ -36,7 +35,6 @@ const Chart = () => {
               stroke="#3c3c3d"
               dot={false}
               strokeWidth={3}
-              name="Wholesale Sales"
             />
             <XAxis dataKey="weekEnding" />
             <YAxis hide={true} />
