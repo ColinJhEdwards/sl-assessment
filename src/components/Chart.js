@@ -50,6 +50,9 @@ const StyledChart = styled.div`
   .chart {
     margin-left: 2rem;
   }
+  @media (max-width: 1440px) {
+    width: 50rem;
+  }
 `;
 
 export default Chart;

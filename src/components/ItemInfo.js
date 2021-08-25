@@ -9,7 +9,7 @@ const ItemInfo = () => {
     <StyledItemInfo>
       <img src={data.image} alt={data.title} />
       <h2>{data.title}</h2>
-      <p>{data.subtitle}</p>
+      <p id="sub">{data.subtitle}</p>
       <div className="tags">
         {data.tags.map((tag) => (
           <p>{tag}</p>
@@ -29,6 +29,9 @@ const StyledItemInfo = styled.div`
   align-items: center;
   img {
     width: 100%;
+  }
+  #sub {
+    margin: 1rem 0rem;
   }
   p {
     text-align: center;
@@ -52,6 +55,12 @@ const StyledItemInfo = styled.div`
       border-radius: 10px;
       padding: 0.5rem;
       margin: 0.5rem 1rem;
+    }
+  }
+  @media (max-width: 1440px) {
+    height: 115vh;
+    img {
+      width: 50%;
     }
   }
 `;

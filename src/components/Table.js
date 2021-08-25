@@ -38,9 +38,21 @@ const StyledTable = styled.div`
   margin-left: 2rem;
   margin-top: 2rem;
   overflow-y: scroll;
+
   .labels {
     display: flex;
     justify-content: space-around;
+    padding: 1rem 0rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: white;
+  }
+  @media (max-width: 1440px) {
+    width: 50rem;
+    .labels {
+      font-size: 0.8rem;
+    }
   }
 `;
 
