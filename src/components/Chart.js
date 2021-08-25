@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from "recharts";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  ResponsiveContainer,
+  Legend,
+} from "recharts";
 import { useSelector } from "react-redux";
 
 const Chart = () => {
@@ -15,12 +22,14 @@ const Chart = () => {
       <div className="chart">
         <ResponsiveContainer width="95%" height={500}>
           <LineChart width={1300} height={500} data={graphData}>
+            <Legend verticalAlign="top" height={36} />
             <Line
               type="monotone"
               dataKey="retailSales"
               stroke="#1209c5"
               dot={false}
               strokeWidth={3}
+              name=" Retail Sales"
             />
             <Line
               type="monotone"
@@ -28,6 +37,7 @@ const Chart = () => {
               stroke="#3c3c3d"
               dot={false}
               strokeWidth={3}
+              name="Wholesale Sales"
             />
             <XAxis dataKey="weekEnding" />
             <YAxis hide={true} />
